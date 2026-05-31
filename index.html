@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>电商带货主播专属主页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      color-scheme: only light;
+    }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fffaf6;
+    }
+    .hero-visual {
+      background: linear-gradient(180deg, rgba(255, 142, 38, 0.16), rgba(255, 104, 0, 0.02)),
+        radial-gradient(circle at top left, rgba(255, 170, 102, 0.35), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255, 119, 34, 0.22), transparent 30%),
+        #fff;
+    }
+    .carousel-card {
+      min-width: 240px;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+    .carousel-card.active {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+    .carousel-card:not(.active) {
+      opacity: 0.58;
+    }
+    .tag-chip {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .tag-chip:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 120, 0, 0.14);
+    }
+  </style>
+</head>
+<body class="text-slate-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="flex items-center justify-between py-5 lg:py-7">
+      <a href="#home" class="text-xl font-semibold text-orange-600">带货达人·黄凛</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+        <a href="#home" class="hover:text-orange-600">首页</a>
+        <a href="#intro" class="hover:text-orange-600">主播介绍</a>
+        <a href="#services" class="hover:text-orange-600">直播业务</a>
+        <a href="#cases" class="hover:text-orange-600">合作案例</a>
+        <a href="#contact" class="hover:text-orange-600">联系我</a>
+      </nav>
+      <button id="mobileNavToggle" class="md:hidden text-orange-600 focus:outline-none">菜单</button>
+    </header>
+
+    <div id="mobileNav" class="md:hidden hidden space-y-3 pb-4 border-b border-slate-200">
+      <a href="#home" class="block text-slate-700">首页</a>
+      <a href="#intro" class="block text-slate-700">主播介绍</a>
+      <a href="#services" class="block text-slate-700">直播业务</a>
+      <a href="#cases" class="block text-slate-700">合作案例</a>
+      <a href="#contact" class="block text-slate-700">联系我</a>
+    </div>
+
+    <main id="home" class="space-y-12 pb-14">
+      <section class="hero-visual rounded-3xl p-6 sm:p-8 lg:p-10 overflow-hidden shadow-[0_24px_80px_rgba(255,147,50,0.12)]">
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
+          <div class="space-y-6">
+            <span class="inline-flex items-center rounded-full bg-orange-50 px-4 py-1.5 text-sm font-medium text-orange-700">电商主播 · 直播操盘 · 带货达人</span>
+            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-950">黄凛的直播间，让销量一路飙升</h1>
+            <p class="max-w-xl text-slate-700 leading-8">专注美妆、潮流家居、数码品类，打造高转化直播间。移动端体验优先，适配短视频、社群与品牌合作。</p>
+
+            <div class="flex flex-wrap gap-3">
+              <span class="tag-chip inline-flex items-center rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-orange-700">美妆护肤</span>
+              <span class="tag-chip inline-flex items-center rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-orange-700">家居生活</span>
+              <span class="tag-chip inline-flex items-center rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-orange-700">手机配件</span>
+              <span class="tag-chip inline-flex items-center rounded-full border border-orange-200 bg-white px-4 py-2 text-sm font-medium text-orange-700">美食零食</span>
+            </div>
+
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a href="#contact" class="inline-flex justify-center rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-orange-200 hover:bg-orange-700">预约合作</a>
+              <a href="#cases" class="inline-flex justify-center rounded-full border border-orange-200 px-6 py-3 text-sm font-semibold text-orange-700 hover:bg-orange-50">查看案例</a>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-orange-200 via-white to-white p-5 shadow-lg">
+            <div class="absolute top-5 right-5 h-16 w-16 rounded-full bg-orange-100 blur-2xl"></div>
+            <div class="relative mx-auto max-w-[320px]">
+              <div class="aspect-[4/5] rounded-[28px] bg-white p-6 shadow-xl ring-1 ring-orange-100">
+                <div class="h-full rounded-[26px] bg-[radial-gradient(circle_at_top,_rgba(255,140,38,0.18),_transparent_38%),_linear-gradient(180deg,_rgba(255,239,226,1),_rgba(255,255,255,0.92))] p-5 flex flex-col justify-between">
+                  <div class="space-y-4">
+                    <div class="flex items-center justify-between text-sm text-slate-500">
+                      <span class="font-semibold text-orange-600">热播在线</span>
+                      <span class="rounded-full bg-orange-50 px-3 py-1 text-orange-700">TOP 5</span>
+                    </div>
+                    <div class="h-48 rounded-3xl bg-[linear-gradient(135deg,#ff9d4c,_#ffd3b1)]"></div>
+                  </div>
+                  <div class="space-y-3 rounded-3xl bg-white/80 p-4 backdrop-blur-sm">
+                    <div class="text-sm text-slate-600">热门领域</div>
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold uppercase text-slate-900">
+                      <span class="rounded-full bg-orange-100 px-3 py-1">爆款好物</span>
+                      <span class="rounded-full bg-orange-100 px-3 py-1">粉丝福利</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="intro" class="space-y-6">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">主播介绍</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-950">打造专业带货场景，信任感与转化双倍提升</h2>
+          </div>
+          <div class="hidden sm:block rounded-3xl bg-orange-50 px-5 py-3 text-sm text-orange-700">移动端优先设计 · 直播场景商务化</div>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-xl font-semibold text-slate-950">直播经验</h3>
+            <p class="mt-3 text-slate-600 leading-7">5年电商直播经验，擅长打造爆款场次，从策划脚本到直播节奏一手把控。</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-xl font-semibold text-slate-950">风格优势</h3>
+            <p class="mt-3 text-slate-600 leading-7">自然亲和、互动节奏快、善于引导下单，适应品牌定位与受众心智。</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h3 class="text-xl font-semibold text-slate-950">合作品牌</h3>
+            <p class="mt-3 text-slate-600 leading-7">已服务多个中高端美妆、数码、家居品牌，累计直播成交破百万。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="space-y-6">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">直播服务</p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-950">可定制的直播营销方案，覆盖全链路带货</h2>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-[28px] border border-orange-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-950">店铺代播</h3>
+            <p class="mt-3 text-slate-600">为品牌店铺提供专业代播，优化商品陈列与话术，提高店铺复购率。</p>
+          </div>
+          <div class="rounded-[28px] border border-orange-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-950">专场直播</h3>
+            <p class="mt-3 text-slate-600">策划主题专场，提高曝光与转化，适配节日、促销、品类爆发节点。</p>
+          </div>
+          <div class="rounded-[28px] border border-orange-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-950">短视频带货</h3>
+            <p class="mt-3 text-slate-600">短视频预热与口播联动，为直播场次带来高质量流量导入。</p>
+          </div>
+          <div class="rounded-[28px] border border-orange-100 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-950">达人合作</h3>
+            <p class="mt-3 text-slate-600">联合达人矩阵，实现SOP化推广与私域转化闭环。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-[32px] bg-gradient-to-r from-orange-50 via-white to-white p-6 shadow-[0_24px_80px_rgba(255,147,50,0.12)]">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">数据战绩</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-950">真实数据，稳健增长</h2>
+          </div>
+          <p class="max-w-2xl text-slate-700 leading-7">通过科学选品、脚本节奏和互动策略，帮助品牌在短时间内提升观看人数、成交率与口碑评分。</p>
+        </div>
+        <div class="mt-8 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-3xl bg-white p-6 text-center shadow-sm border border-slate-200">
+            <div class="text-4xl font-bold text-orange-600">28K+</div>
+            <p class="mt-2 text-slate-600">场均观看</p>
+          </div>
+          <div class="rounded-3xl bg-white p-6 text-center shadow-sm border border-slate-200">
+            <div class="text-4xl font-bold text-orange-600">2.5W+</div>
+            <p class="mt-2 text-slate-600">带货销量</p>
+          </div>
+          <div class="rounded-3xl bg-white p-6 text-center shadow-sm border border-slate-200">
+            <div class="text-4xl font-bold text-orange-600">4.9/5</div>
+            <p class="mt-2 text-slate-600">客户口碑评分</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" class="space-y-6">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">合作案例</p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-950">过去的直播场次，都是我们的成功背书</h2>
+        </div>
+        <div class="space-y-4">
+          <div class="overflow-hidden rounded-[32px] bg-slate-950 p-6 text-white shadow-xl sm:p-8">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p class="text-xs uppercase tracking-[0.22em] text-orange-300">旗舰案例</p>
+                <h3 class="mt-3 text-2xl font-semibold">美妆品牌 618 专场</h3>
+              </div>
+              <span class="rounded-full bg-orange-500/15 px-4 py-2 text-sm text-orange-200">场均观看 35K +</span>
+            </div>
+            <p class="mt-4 text-slate-200 leading-7">从直播脚本到粉丝互动闭环，帮助品牌实现短时间内高转化爆发，单场成交突破 200 万。</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-[28px] overflow-hidden border border-slate-200 bg-white shadow-sm">
+              <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="直播间示意图" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-slate-950">数码品类热销场</h3>
+                <p class="mt-2 text-slate-600">流量峰值超 42K，助力品牌新品首发快速破圈。</p>
+              </div>
+            </div>
+            <div class="rounded-[28px] overflow-hidden border border-slate-200 bg-white shadow-sm">
+              <img class="h-52 w-full object-cover" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="直播互动图" />
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-slate-950">家居品类深度场</h3>
+                <p class="mt-2 text-slate-600">通过场景化呈现提升信任，转化率较常规直播提升 22%。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="rounded-[32px] bg-white p-6 shadow-[0_24px_80px_rgba(255,147,50,0.12)]">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="space-y-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">商务合作</p>
+            <h2 class="text-3xl font-bold text-slate-950">联系我们，一起策划下一场爆款直播</h2>
+            <p class="text-slate-700 leading-7">欢迎品牌招商经理、店铺负责人、营销负责人发起合作。提供一对一直播策划、场次排期与效果保障方案。</p>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-3xl bg-orange-50 p-5">
+                <p class="text-sm font-semibold text-orange-700">联系人</p>
+                <p class="mt-2 text-slate-800">黄凛</p>
+              </div>
+              <div class="rounded-3xl bg-orange-50 p-5">
+                <p class="text-sm font-semibold text-orange-700">商务邮箱</p>
+                <p class="mt-2 text-slate-800">partner@example.com</p>
+              </div>
+              <div class="rounded-3xl bg-orange-50 p-5">
+                <p class="text-sm font-semibold text-orange-700">微信对接</p>
+                <p class="mt-2 text-slate-800">直播达人黄凛</p>
+              </div>
+              <div class="rounded-3xl bg-orange-50 p-5">
+                <p class="text-sm font-semibold text-orange-700">手机号</p>
+                <p class="mt-2 text-slate-800">139-0000-8888</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="space-y-4 rounded-[32px] border border-slate-200 bg-slate-50 p-6 shadow-sm">
+            <div class="space-y-3">
+              <label class="block text-sm font-medium text-slate-800">姓名</label>
+              <input class="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100" type="text" placeholder="请输入姓名" />
+            </div>
+            <div class="space-y-3">
+              <label class="block text-sm font-medium text-slate-800">公司/品牌</label>
+              <input class="w-full rounded-3xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100" type="text" placeholder="请输入公司或品牌" />
+            </div>
+            <div class="space-y-3">
+              <label class="block text-sm font-medium text-slate-800">合作需求</label>
+              <textarea class="w-full min-h-[120px] rounded-3xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100" placeholder="简单描述您的直播合作需求"></textarea>
+            </div>
+            <button class="w-full rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-orange-200 hover:bg-orange-700">提交预约</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">动态展示</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-950">标签与案例轮播，让内容更有节奏</h2>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-[32px] bg-white p-5 shadow-sm">
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex flex-wrap gap-3" id="dynamicTags"></div>
+            <button id="nextCase" class="rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-700 hover:bg-orange-100">下一条</button>
+          </div>
+          <div class="flex gap-4 overflow-x-auto pb-2" id="carouselTrack">
+            <div class="carousel-card rounded-[28px] bg-gradient-to-br from-orange-50 to-white p-5 shadow-sm active">
+              <h3 class="text-lg font-semibold text-slate-950">618 榜单爆款</h3>
+              <p class="mt-3 text-slate-600">某美妆品牌直播场实现新用户转化率提升 1.8 倍。</p>
+            </div>
+            <div class="carousel-card rounded-[28px] bg-gradient-to-br from-orange-50 to-white p-5 shadow-sm">
+              <h3 class="text-lg font-semibold text-slate-950">品牌新品首发</h3>
+              <p class="mt-3 text-slate-600">数码新品直播带货，单场引导成交超 5000 单。</p>
+            </div>
+            <div class="carousel-card rounded-[28px] bg-gradient-to-br from-orange-50 to-white p-5 shadow-sm">
+              <h3 class="text-lg font-semibold text-slate-950">私域深度转化</h3>
+              <p class="mt-3 text-slate-600">专属粉丝福利场提升复购率，带动社群销售闭环。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNavToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    const dynamicTags = [
+      '爆款场次', '人气主播', '转化率高', '粉丝互动', '直播策划', '内容落地', '品牌背书', '私域带货'
+    ];
+    const tagContainer = document.getElementById('dynamicTags');
+    let currentTagIndex = 0;
+
+    function renderTag() {
+      tagContainer.innerHTML = '';
+      const tag = document.createElement('span');
+      tag.className = 'inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-700';
+      tag.textContent = dynamicTags[currentTagIndex];
+      tagContainer.appendChild(tag);
+    }
+
+    renderTag();
+    setInterval(() => {
+      currentTagIndex = (currentTagIndex + 1) % dynamicTags.length;
+      renderTag();
+    }, 2800);
+
+    const carouselCards = document.querySelectorAll('.carousel-card');
+    const nextCase = document.getElementById('nextCase');
+    let currentCarousel = 0;
+
+    function updateCarousel(index) {
+      carouselCards.forEach((card, idx) => {
+        card.classList.toggle('active', idx === index);
+      });
+      carouselCards[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    }
+
+    nextCase.addEventListener('click', () => {
+      currentCarousel = (currentCarousel + 1) % carouselCards.length;
+      updateCarousel(currentCarousel);
+    });
+
+    updateCarousel(currentCarousel);
+  </script>
+</body>
+</html>
